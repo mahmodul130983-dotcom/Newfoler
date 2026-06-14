@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I loveeeeee youuuuu pakhiiiii💖</title>
+
+<style>
+
+/* ================= GLOBAL ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:#fff0f5;
+}
+
+/* ================= HEARTS ================= */
+.heart{
+position:absolute;
+font-size:22px;
+animation:fall 7s linear infinite;
+pointer-events:none;
+z-index:1;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh);opacity:1;}
+100%{transform:translateY(110vh);opacity:0;}
+}
+
+/* ================= PAGE SYSTEM ================= */
+.page{
+position:absolute;
+width:100%;
+height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+text-align:center;
+z-index:2;
+}
+
+.page.active{
+display:flex;
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+0%{opacity:0;transform:scale(.9);}
+100%{opacity:1;transform:scale(1);}
+}
+
+/* ================= LOCK ================= */
+#lock{
+background:linear-gradient(135deg,#ffe0ec,#fff5f7);
+}
+
+.title{
+font-size:34px;
+color:#ff4d88;
+font-weight:bold;
+}
+
+.sub{
+color:#777;
+margin:10px 0 20px;
+}
+
+.password{
+padding:14px;
+width:250px;
+border:none;
+border-radius:12px;
+text-align:center;
+font-size:16px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn{
+margin-top:15px;
+padding:12px 30px;
+border:none;
+border-radius:25px;
+background:#ff4d88;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* ================= SLIDE 1 ================= */
+#slide1{
+background:linear-gradient(135deg,#ffd6e8,#ffeef5);
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:25px;
+max-width:400px;
+width:90%;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.yes,.no{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+}
+
+.yes{background:#ff4d88;color:white;}
+.no{background:#333;color:white;position:absolute;}
+
+/* ================= SLIDE 2 ================= */
+#slide2{
+background:linear-gradient(135deg,#ffcad4,#ffe5ec);
+}
+
+.gift-box{
+background:white;
+padding:25px;
+border-radius:25px;
+max-width:500px;
+width:90%;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.gift{
+font-size:60px;
+margin:10px;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+margin-top:10px;
+padding:10px;
+background:#fff0f5;
+border-radius:10px;
+}
+
+/* ================= SLIDE 3 ================= */
+#slide3{
+background:linear-gradient(135deg,#ffb7c5,#ffc8dd);
+}
+
+.memory img{
+width:110px;
+height:110px;
+object-fit:cover;
+border-radius:15px;
+margin:5px;
+}
+
+/* ================= MOTIVATION BOX ================= */
+.motivation-box{
+background:rgba(0,0,0,0.45);
+backdrop-filter: blur(10px);
+padding:25px;
+border-radius:25px;
+max-width:500px;
+color:white;
+line-height:1.8;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+font-weight:700;
+}
+
+.motivation-box h2{
+font-size:24px;
+margin-bottom:10px;
+color:#fff;
+text-shadow:2px 2px 10px rgba(0,0,0,0.6);
+}
+
+.motivation-box p{
+font-size:16px;
+font-weight:700;
+color:#fff;
+text-shadow:1px 1px 6px rgba(0,0,0,0.6);
+}
+
+@keyframes pop{
+0%{transform:scale(.8);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+/* ================= SMILE BOX ================= */
+.smile-box{
+background:white;
+padding:30px;
+border-radius:25px;
+max-width:450px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+animation:pop .8s ease;
+}
+
+.smile-emoji{
+font-size:55px;
+margin:15px 0;
+animation:bounce 1.2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+.smile-text{
+font-size:16px;
+color:#444;
+line-height:1.6;
+}
+
+/* ================= FINAL ================= */
+#slide6{
+background:linear-gradient(135deg,#ff4d6d,#ffb3c1);
+color:white;
+}
+
+</style>
+  .snoopy{
+width:180px;
+margin:15px 0;
+border-radius:20px;
+animation: float 3s ease-in-out infinite;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+</head>
+
+<body>
+
+<!-- LOCK -->
+<div class="page active" id="lock">
+<div class="title">💖 I loveeee yoouuuu pakhiiii💖</div>
+
+<!-- Snoopy Image (ADD THIS) -->
+<img src="snoopy.png" class="snoopy">
+
+<div class="sub">Enter Password</div>
+<input id="pass" class="password" type="password">
+<button class="btn" onclick="unlock()">Unlock</button>
+</div>
+
+<!-- SLIDE 1 -->
+<div class="page" id="slide1">
+<div class="box">
+<h2>💖 Will You Be Mine?</h2>
+<br>
+<button class="yes" onclick="go('slide1','slide2')">YES ❤️</button>
+<button class="no" id="noBtn">NO 😏</button>
+</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="page" id="slide2">
+<div class="gift-box">
+<h2>🎁 Gifts for you sweetheart,open both of them.</h2>
+
+<div>
+<span class="gift" onclick="gift1()">🎁</span>
+<span class="gift" onclick="gift2()">🎀</span>
+</div>
+
+<div id="g1" class="hidden">You are so special in my life & “I’ll always try my best to keep you happy and smiling,no matter what it takes.“I’ll love you until my last breath”💖</div>
+<div id="g2" class="hidden">I love you Sumaiya,I am so lucky that i have you❤️</div>
+
+<button class="btn" onclick="go('slide2','slide3')">Next</button>
+</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="page" id="slide3">
+<h2>📸 Memories together</h2>
+
+<div class="memory">
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">>
+</div>
+
+<button class="btn" onclick="go('slide3','slide4')">Next</button>
+</div>
+
+<!-- MOTIVATION -->
+<div class="page" id="slide4">
+<div class="motivation-box">
+
+<h2>🌟 Motivation</h2>
+<br>
+
+💖 I trust you so much,you don’t even realize how much I believe in you 🥹.<br>
+✨ You’re honestly so beautiful, not just outside but in the way you think and carry yourself.<br>
+🌸 Your smile has this calm power,it can literally change mine whole mood..<br>
+🦋 I admire how you try your best in everything, especially your studies. Keep going like that.<br>
+💫 I know you have big goals, and I truly believe you’re capable of reaching every one of them.<br>
+🌷 You’re smarter than you think.<br>
+❤️ Life won’t always be easy, but I trust you to handle it better than most people can.<br>
+🌙 You have a different kind of glow when you focus on your dreams,don’t lose that.<br>
+💖 No matter what happens, I’m always proud of you and I believe in you fully.<br>
+✨ “If the world turns against you, I’ll still choose you.even it means standing alone.<br>
+</div>
+
+<button class="btn" onclick="go('slide4','slide5')" style="margin-top:15px;">
+I am ur😏 
+</button>
+</div>
+
+<!-- SMILE -->
+<div class="page" id="slide5">
+
+<div class="smile-box">
+
+<h2>😆 Smile Please 😆</h2>
+
+<div class="smile-emoji">😁😂😍🥰✨</div>
+
+<p class="smile-text">
+Your smile is everything for me 💖<br><br>
+Please smile right now 😊<br><br>
+You look the most beautiful person when you smile ✨
+</p>
+
+</div>
+
+<button class="btn" onclick="go('slide5','slide6')" style="margin-top:15px;">
+Last 💌
+</button>
+</div>
+
+<!-- FINAL -->
+<div class="page" id="slide6">
+<h1>❤️ You are so pretty my baby💖
+  “You’re too cute 🥹 I can’t even focus when I see you… next time we meet, I’ll probably just keep staring at you the whole time.”❤️</h1>
+<button class="btn" onclick="confetti()">Finish 🎉</button>
+</div>
+
+<script>
+
+/* PAGE SWITCH */
+function go(a,b){
+document.getElementById(a).classList.remove("active");
+document.getElementById(b).classList.add("active");
+}
+
+/* PASSWORD */
+function unlock(){
+let p=document.getElementById("pass").value;
+if(p==="Sumu💕u"){
+go('lock','slide1');
+}else{
+alert("Wrong Password 💔");
+}
+}
+
+/* GIFTS */
+function gift1(){document.getElementById("g1").style.display="block";}
+function gift2(){document.getElementById("g2").style.display="block";}
+
+/* NO BUTTON MOVE */
+let noBtn=document.getElementById("noBtn");
+noBtn.addEventListener("mouseover",()=>{
+noBtn.style.left=Math.random()*200+"px";
+noBtn.style.top=Math.random()*120+"px";
+});
+
+/* HEARTS */
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML=["💖","💕","🌸","🦋","✨"][Math.floor(Math.random()*5)];
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+},400);
+
+/* CONFETTI */
+function confetti(){
+for(let i=0;i<120;i++){
+let c=document.createElement("div");
+c.innerHTML="🎉";
+c.style.position="absolute";
+c.style.left=Math.random()*100+"vw";
+c.style.top="-10vh";
+c.style.fontSize="20px";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),3000);
+}
+}
+
+</script>
+
+</body>
+                                                           </html>
